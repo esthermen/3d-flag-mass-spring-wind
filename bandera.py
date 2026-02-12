@@ -5,7 +5,7 @@ from perlin_noise import PerlinNoise
 import matplotlib.image as mpimg
 
 # -------------------------
-# Parámetros físicos
+# physical parameters
 # -------------------------
 N = 20
 masas = 10
@@ -23,7 +23,7 @@ L0_h = dist/(N-1)*np.ones(N)
 z_fixed = 4.0*np.ones(N)
 
 # -------------------------
-# Posiciones y velocidades
+# Positions and speed
 # -------------------------
 r = np.zeros((masas, N, d))
 v = np.zeros((masas, N, d))
@@ -47,9 +47,9 @@ noise_gen = PerlinNoise(octaves=3, seed=42)
 t_global = 0.0
 
 # -------------------------
-# Cargar textura
+# texture
 # -------------------------
-img = mpimg.imread("tela.jpg")  # ruta de la imagen
+img = texture = mpimg.imread("assets/tela.jpg")  # ruta de la imagen
 H, W, _ = img.shape
 
 def get_color_from_texture(x, z, r_min, r_max):
@@ -251,3 +251,4 @@ def update(frame):
 
 ani = animation.FuncAnimation(fig,update,frames=800,interval=20,blit=False)
 plt.show()
+
