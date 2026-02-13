@@ -60,3 +60,7 @@ Author
 
 Esther Menéndez
 BSc Physics – Computational Simulation Focus
+
+## Simulation Preview
+
+![Cloth Simulation](media/cloth_simulation.gif)
